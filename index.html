@@ -12,3 +12,34 @@
 
 
 </head>
+
+<body>
+<div class="container-fluid">
+
+  <h2>CSV file viewer</h2>
+  <p>Please wait 15-20 seconds because kepler data is very big file</p>
+  <p>it is going to take some time, for bootstrap and js to retrieve all the data</p>
+  <div id='table-container'></div>
+
+</div>
+
+
+<!--<editor-fold desc="life shit">-->
+<h>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+  <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+  <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+</h>
+<!--</editor-fold>-->
+
+<h1h1>
+  <script type="text/javascript">
+    function format_link(link) {
+      if (link)
+        return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+      else
+        return "";
+    }
