@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSV to HTML Table</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSV to HTML Table</title>
 
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
 
 
-</head>
+  </head>
 
-<body>
-<div class="container-fluid">
+  <body>
+    <div class="container-fluid">
 
-  <h2>CSV file viewer</h2>
-  <p>Please wait 15-20 seconds because kepler data is very big file</p>
-  <p>it is going to take some time, for bootstrap and js to retrieve all the data</p>
-  <div id='table-container'></div>
+      <h2>CSV file viewer</h2>
+      <p>Please wait 15-20 seconds because kepler data is very big file</p>
+      <p>it is going to take some time </p>
+      <div id='table-container'></div>
 
-</div>
+    </div>
 
 
-<!--<editor-fold desc="life shit">-->
-<h>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--<editor-fold desc="life shit">-->
+    <h>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
 
-  <script type="text/javascript" src="js/jquery.csv.min.js"></script>
-  <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-  <script type="text/javascript" src="js/csv_to_html_table.js"></script>
-</h>
-<!--</editor-fold>-->
+      <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+      <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+      <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+    </h>
+    <!--</editor-fold>-->
 
-<h1h1>
-  <script type="text/javascript">
-    function format_link(link) {
-      if (link)
-        return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-      else
-        return "";
-    }
+    <h1h1>
+      <script type="text/javascript">
+        function format_link(link) {
+          if (link)
+            return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+          else
+            return "";
+        }
 
-    CSVFileViewerOnline.init({
-      PathOfCsvFile: 'data/kepler-data.csv',
-      element: 'table-container',
-      AvailableCsvOptions: {separator: ',', delimiter: '"'},
-      CsvDatabaseOptions: {"paging": false},
-      CSVFileFormatting: [[4, format_link]]
-    });
-  </script>
-</h1h1>
-</body>
+        CSVFileViewerOnline.init({
+          PathOfCsvFile: 'data/kepler-data.csv',
+          element: 'table-container',
+          AvailableCsvOptions: {separator: ',', delimiter: '"'},
+          CsvDatabaseOptions: {"paging": false},
+          CSVFileFormatting: [[4, format_link]]
+        });
+      </script>
+    </h1h1>
+  </body>
 </html>
